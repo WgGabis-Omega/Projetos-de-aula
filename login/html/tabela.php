@@ -3,12 +3,14 @@ require '../php/Usuario.class.php';
 $usuario = new Usuario();
 $con = $usuario->conecta();
 
-if( $con ){
+if ($con) {
+
     $lista = $usuario->listarUsuarios();
-    if( empty( $lista) ){
-        echo "Nao existem usuarios para listar";
+    if (empty($lista)) {
+        echo "NAO EXISTEM USUARIOS";
         exit();
-    }else{
+    } else {
+        
         ?>
         <table>
             <tr>
@@ -16,24 +18,26 @@ if( $con ){
                 <th>Nome</th>
                 <th>Email</th>
             </tr>
-            <?php 
-            foreach($lista as $item){
-                $id    = $item['id'];
-                $nome  = $item['nome'];
+
+            <?php
+            foreach ($lista as $item) {
+                $id = $item['id'];
+                $nome = $item['nome'];
                 $email = $item['email'];
-                ?> 
-                <tr>
-                    <td> <?php echo $id;   ?> </td>
-                    <td> <?php echo $nome; ?> </td>
-                    <td> <?php echo $email;?> </td>
-                </tr>
-                <?php
-            }
             ?>
-        </table>
+
+                <tr>
+                    <td><?php echo $id; ?></td>
+                    <td><?php echo $nome; ?></td>
+                    <td><?php echo $email; ?></td>
+                </tr>
+
+                <?php } ?>
+            </table>
         <?php
     }
-}else{
-    echo "Banco de dados Indisponível. Tente mais tarde!";
+} else {
+    echo "banco de dados indisponivel";
     exit();
 }
+
