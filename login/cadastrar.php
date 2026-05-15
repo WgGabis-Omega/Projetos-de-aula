@@ -17,7 +17,7 @@ if( isset($_POST['nome']) ){
             $user = $usuario->inserirUsuario($nome, $email, $senha);
             if($user){
                 $_SESSION['nome'] = $nome;
-                header("Location:home.php");
+                header("Location:tabela.php");
             }else{
                 echo "Erro ao cadastrar o Usuario.";
             }

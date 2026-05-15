@@ -45,7 +45,7 @@ if (!$con) {
         <div class="container-principal">
             <!-- aqui é o espaço onde vamos criar o formulário-->
             <div class="formulario">
-                <h2>Cadastro de Usuário</h2>
+                <h2>Alteração de Dados</h2>
                 <form action="../php/editar_submit.php" method="get">
                     <!-- adicionando campos do formulário-->
                     <input type="hidden" name   = "id"    value = "<?php echo $user['id']; ?>">

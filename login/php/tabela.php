@@ -32,7 +32,7 @@ if (!$con) {
 
 } else {
 
-    echo "<p class = 'btn btn-primary my-5' href = 'cadastrar.php'>Novo Usuário</a></p>";
+    echo "<a href = '../html/cadastroUsuario.html' class = 'btn btn-primary my-5'>Novo Usuário</a></p>";
 
     $usuarios = $usuario->listarUsuarios();
     //motagem do html da tabela
@@ -62,8 +62,8 @@ if (!$con) {
         $table .= "<td>$id</td>";
         $table .= "<td>$nome</td>";
         $table .= "<td>$email</td>";
-        $table .= "<td><a class = 'btn btn-info' href = 'editar.php?id=$id'>Editar</a></td>";
-        $table .= "<td><a class = 'btn btn-danger' href = 'deletar.php?$id'>Excluir</a></td>";
+        $table .= "<td><a class = 'btn btn-info' href   = 'editar.php?id=$id'>Editar</a></td>";
+        $table .= "<td><a class = 'btn btn-danger' href = 'deletar.php?id=$id'>Excluir</a></td>";
 
         $table .= '</tr>';
 

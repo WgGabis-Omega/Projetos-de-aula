@@ -5,7 +5,7 @@ $conn = $usuario->conecta();
 
 if( $conn ){
     if (isset($_POST['usuario'])){
-        $nome = addslashes( $_POST['usuario'] );
+        $nome    = addslashes( $_POST['usuario'] );
         $senha   = addslashes( $_POST['senha'] );
         $email   = addslashes( $_POST['email'] );
 
@@ -20,6 +20,7 @@ if( $conn ){
             $user = $usuario->inserirUsuario($nome, $email, $senha);
             if( $user ){
                 echo "Usuario cadastrado com sucesso!";
+                header("Location:tabela.php");
             }else{
                 echo "Erro ao cadastrar o Usuario!!";
             }

@@ -31,8 +31,7 @@ class Usuario
 
         return $stmt->execute();
     }
-    public function checkUser($email)
-    {
+    public function checkUser($email){
         $sql = "SELECT *FROM usuario WHERE email = :e";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(":e", $email);
@@ -40,8 +39,7 @@ class Usuario
 
         return $stmt->rowCount() > 0;
     }
-    public function checkPass($email, $senha)
-    {
+    public function checkPass($email, $senha){
         $sql = "SELECT *FROM usuario WHERE email = :e AND senha = :s";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(":e", $email);
@@ -50,8 +48,7 @@ class Usuario
 
         return $stmt->rowCount() > 0;
     }
-    public function listarUsuarios()
-    {
+    public function listarUsuarios(){
         $sql = "SELECT * FROM usuario";
         $stmt = $this->pdo->prepare($sql);
         $stmt ->execute();
@@ -62,8 +59,7 @@ class Usuario
         }
     }
 
-      public function listarUsuario($id)
-    {
+      public function listarUsuario($id){
         $sql = "SELECT * FROM usuario WHERE id = :i";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue(":i", $id);
@@ -76,7 +72,7 @@ class Usuario
         }
     }
   
-    public function apagqarUsuario($id){
+    public function apagarUsuario($id){
         $sql = "DELETE FROM usuario WHERE id = :i";
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindValue( ":i", $id);
@@ -84,9 +80,14 @@ class Usuario
     }
 
     public function alterarUsuario( $id, $nome, $email, $senha ){
-        $sql = "UPDATE usuario SET nome = :n, email = :e, senha = :s, WHERE id = :i";
+        $sql = "UPDATE usuario SET nome = :n, email = :e, senha = :s WHERE id = :i";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindValue("", $id);
+        $stmt->bindValue("i", $id);
+        $stmt->bindValue("n", $nome);
+        $stmt->bindValue("e", $email);
+        $stmt->bindValue("s", $senha);
+
+        return $stmt->execute();
     }
 
 }

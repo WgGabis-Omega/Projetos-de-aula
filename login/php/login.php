@@ -7,8 +7,8 @@ $connection = $usuario->conecta();
 if( $connection ){
    
     if( isset($_POST['email'])){
-        $email = addlashes($_POST['email']);
-        $senha = md5(addlashes($_POST['senha']));
+        $email = addslashes($_POST['email']);
+        $senha = md5(addslashes($_POST['senha']));
         
         $user = $usuario->checkUser( $email );
         
