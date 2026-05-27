@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Biblioteca </title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/biblioteca.css">
+    <link rel="stylesheet" href="../css/responsividade.css">
+
+    <script defer src="../js/explorar.js"></script>
+    <script defer src="../js/navegacao.js"></script>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <h1>TTLD</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li>Inicio</li>
+                <li>Biblioteca</li>
+                <li>Explorar</li>
+                <li>Favoritos</li>
+                <li>Configurações</li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <input type="text" id="search" placeholder="Pesquisar histórias">
+            <button class="new=story-btn"> Nova História </button>
+        </header>
+        <section class="continue-reading">
+            <h2> Continuar Lendo </h2>
+            <div class="continue-card">
+                <img src="../assets/covers/placeholder.jpg">
+                <div class="continue-info">
+                    <h3> Nome Genérico 1 </h3>
+                    <p> Capítulo 12 de 28 </p>
+
+                    <div class="progress-bar">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="livrary-section">
+            <h2> Minhas Histórias </h2>
+            <div class="stories-grid">
+                <article class="story-card">
+                    <img src="../assets/covers/placeholder.jpg">
+                    <div class="story-info">
+                        <h3> Nome Genérico 2 </h3>
+                        <p class="author"> por Osvaldo</p>
+                        <div class="meta">
+                            <span> 69k </span>
+                            <span> 4k </span>
+                        </div>
+                        <span class="status-ongoing"> Em Andamento </span>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="library-section">
+            <h2> Favoritos </h2>
+            <div class="story-grid">
+                <article class="story-card-favorite">
+                    <img src="../assets/covers/placeholder.jpg">
+                    <div class="story-info">
+                        <h3> Nome Genérico 3</h3>
+                        <p class="author"> por Luiza </p>
+                        <div class="meta">
+                            <span> 9k </span>
+                            <span> 6.7k</span>
+                        </div>
+                        <span class="status-complete"> Concluída </span>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
