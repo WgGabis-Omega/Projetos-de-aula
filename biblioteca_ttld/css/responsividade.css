@@ -1,0 +1,44 @@
+@media(max-width: 900px){
+
+    .sidebar {
+        width: 90px;
+        padding: 20px;
+    }
+
+    .sidebar h1 {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 90px;
+        width: calc(100% - 90px);
+    }
+
+}
+
+@media(max-width: 768px){
+    body{
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .topbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #search {
+        width: 100%;
+    }
+    
+}
